@@ -1,0 +1,26 @@
+Title: 'Metadata deletion regression'
+Layout:
+  - '    B    '
+Icons:
+  B:
+    display:
+      material: STONE
+      name: 'Player data'
+      lore:
+        - 'playerData: %trmenu_data_playerData%'
+    actions:
+      left:
+        - 'set-data: playerData saved'
+        - 'update: B'
+      right:
+        - 'del-data: playerData'
+        - 'update: B'
+      shift_left:
+        - 'set-data: playerData old;playerDataExtra extra;keepData keep'
+        - 'del-data: playerData.*'
+        - 'update: B'
+      shift_right:
+        - 'set-data: playerData old'
+        - 'del-data: playerData'
+        - 'set-data: playerData new'
+        - 'update: B'

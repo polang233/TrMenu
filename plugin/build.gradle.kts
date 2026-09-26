@@ -59,6 +59,9 @@ repositories {
 }
 
 dependencies {
+    testImplementation(kotlin("stdlib"))
+    testImplementation("junit:junit:4.13.2")
+
     taboo(project(":common"))
     taboo(project(":api:receptacle"))
     taboo(project(":api:action"))
