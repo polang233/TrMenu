@@ -27,12 +27,3 @@ jobs:
         with:
           name: TrMenu Artifact
           path: build/libs/*.jar
-      - name: Automatic Releases
-        if: "github.event_name != 'pull_request'"
-        uses: marvinpinto/action-automatic-releases@master
-        with:
-          title: "TrMenu"
-          automatic_release_tag: "trmenu"
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          files: "build/libs/*.jar"
-          prerelease: true
